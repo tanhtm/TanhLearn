@@ -1,0 +1,160 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[utf8]{inputenc} %Reconoce algunos símbolos
+\usepackage{lmodern} %optimiza algunas fuentes
+\usepackage{graphicx}
+\usepackage[left=2.0cm, right=2.0cm, top=2.0cm, bottom=2.0cm]{geometry}
+\graphicspath{ {images/} }
+\usepackage{hyperref} % Uso de links
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{theorem}[2][Định lý]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+
+\makeatletter\@addtoreset{section}{part}\makeatother %.......
+\begin{document}
+ 
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+ 
+    \title{Đề cương ôn tập Topology}
+    \author{Nguyễn Tú Anh - A29888 - ntanhtm@gmail.com}
+
+    \maketitle
+    \part{Định nghĩa}
+        \section{Điểm trong}
+            Điểm $a \in A$ gọi là điểm trong nếu $\exists r > 0 $ để $B^S(a,r) \subset A$          
+        \section{Điểm biên}
+            Điểm $b \in S$ gọi là điểm biển của $A$ nếu $\forall r > 0$, $B^S(b,r)$  chứa ít nhất một điểm thuộc A và 1 điểm thuộc $S - A$
+        \section{Tập mở, tập đóng}
+            \paragraph{Tập mở}: Tập $A \subset S$ gọi là mở trong $S$ nếu $\forall a \in A$ đều là điểm trong.
+            \paragraph{Tập đóng}: Tập $A \subset S$ gọi là đóng trong $S$ nếu $S - A$ là tập mở trong $S$.
+        \section{Tập lồi}
+            Tập $C \subset \mathbb{R}^n$ là tập lồi nếu nó chứa mọi đường thẳng đi qua 2 điểm bất kì nằm trong nó.
+            Hay nói cách khác, nếu $(1- \lambda)a + \lambda b \in C$, với $a,b$ là 2 điểm bất kì trong C và $0 \leq \lambda \leq 1$ thì ta nói $C$ là tập lồi. 
+    \newpage
+    \part{Phát biểu kết quả}
+        \section{Điều kiện cần và đủ để một hàm là liên tục}
+            {\bf Định lý 13.3.4}\\
+
+            Cho $f: \mathbb{R}^n \to \mathbb{R}^m$, $f$ là liên tục nếu và chỉ nếu một trong các điều kiện tương đương sau được thỏa mãn:
+            \begin{itemize}
+                \item [(a)] $f^{-1}(U)$ là tập mở với mọi tập mở $U$ trong $\mathbb{R}^m$
+                \item [(b)] $f^{-1}(F)$ là tập đóng với mọi tập đóng $F$ trong $\mathbb{R}^m$
+            \end{itemize}
+        \section{Định lý cực đại}
+            {\bf Định lý 13.4.1}\\
+
+            Giả sử $f$ là một hàm liên tục từ $X \times Y$ đến $\mathbb{R}$, với $X \subseteq \mathbb{R}^n$, $Y \subseteq \mathbb{R}^m$,
+            và $Y$ là tập 'compact', $X,Y \neq \varnothing$. Thì:
+            \begin{itemize}
+                \item [(a)] Hàm giá trị $V(x) = \max_{y \in Y} f(x,y)$ là một hàm liên tục của $x$.
+                \item [(b)] Nếu bài toán cực đại có duy nhất một lời giải $y = y(x)$ với mọi x, thì $y(x)$ là một hàm liên tục của $x$.
+            \end{itemize}
+    \newpage
+    \part{Chứng minh định lý}
+        \section{Bolzano-Weierstrass}
+            {\bf Định lý 13.2.5}
+            \subsection{Phát biểu}
+                Một tập con $S$ của $\mathbb{R}^n$ là {\bf compact} (đóng và bị chặn) nếu và chỉ nếu 
+                mọi dãy các điểm trong $S$ có một dãy con hội tụ tới một điểm trong $S$.
+            \subsection{Chứng minh}
+                \subsubsection{Định lý bổ trợ}
+                    \paragraph{Định lý 13.2.3 (Bao đóng và hội tụ)}
+                        \begin{itemize}
+                            \item Với bất kỳ tập $S \subseteq \mathbb{R}^n$, một điểm $a$ trong $\mathbb{R}^n$ thuộc $S$ nếu và chỉ nếu $a$ là giới hạn của một dãy $\{x_k\}$ trong $S$.
+                            \item Một tập $S \subseteq \mathbb{R}^n$ bị đóng nếu và chỉ nếu mọi chuỗi hội tụ của các điểm trong $S$ có giới hạn của nó trong $S$.
+                        \end{itemize}
+                    \paragraph{Định lý 13.2.4}
+                        Một tập con $S \subseteq \mathbb{R}^n$ bị chặn nếu và chỉ nếu mỗi dãy của các điểm trong $S$ có một dãy con hội tụ.
+                \subsubsection{Chứng minh}
+                    {\bf Chiều thuận}\\
+
+                        \begin{tabular}{c | c}
+                            Giả thiết  &  $S \subseteq \mathbb{R}^n$ là tập compact, $\{{\bf x}_k\}$ là một dãy trong $S$\\
+                            \hline 
+                            Kết luận & $\{{\bf x}_k\}$ chứa một dãy con hội tụ tới một điểm trong $S$.
+                        \end{tabular}\\
+
+                        Chứng minh:\\
+                        Do $ S \subseteq \mathbb{R}^n$ và bị chặn (compact) $\Rightarrow$ $\{{\bf x}_k\}$ chứa một dãy con hột tụ (Định lý 13.2.4).\\
+                        Do $S$ đóng nên giới hạn của dãy con phải nằm trong $S$ (Định lý 13.2.3).\\
+                        Vậy $\{{\bf x}_k\}$ chứa một dãy con hội tụ tới một điểm trong $S$.\\\\
+                    {\bf Chiều ngược}\\
+
+                        \begin{tabular}{c | c}
+                            Giả thiết  & Mọi dãy các điểm trong $S$ có một dãy con hội tụ tới một điểm trong $S$.\\
+                            \hline 
+                            Kết luận & $S$ đóng và bị chặn.
+                        \end{tabular}\\
+
+                        Chứng minh:\\
+                        Theo định lý 13.2.4 thì $S$ bị chặn.\\
+                        Đặt {\bf x} là điểm tùy ý trong bao đóng của $S$.\\
+                        $\Rightarrow$ có một dãy $\{{\bf x}_k\}$ trong $S$ với $\lim_{k \to \infty } {\bf x}_k = {\bf x}$\\
+                        Theo giả thiết, $\{{\bf x}_k\}$ có một dãy con $\{{\bf x}_{k_j}\}$ hội tụ đến một giới hạn ${\bf x'}$ trong $S$.\\
+                        Nhưng  $\{{\bf x}_{k_j}\}$ cũng hội tụ đến ${\bf x}$.\\
+                        $\Rightarrow {\bf x} = {\bf x'} \in S$\\
+                        $\Rightarrow S$ đóng.
+        \section{Ma trận sản xuất}
+            {\bf Định lý 13.7.2}
+            \subsection{Phát biểu}
+                Với một ma trận vuông cấp $n$ với các phần tử không âm ${\bf A}$, các mệnh đề sau đây là tương đương:
+                \begin{itemize}
+                    \item [(a)] ${\bf A}$ là ma trận sản xuất.
+                    \item [(b)] ${\bf A}^m \to {\bf 0}$ khi $m \to \infty$.
+                    \item [(c)] $({\bf I - A})^{-1} = {\bf I} + {\bf A} + {\bf A}^2 + ... $.
+                    \item [(d)] $({\bf I - A})^{-1}$ tồn tại và không âm.
+                \end{itemize} 
+            \subsection{Chứng minh}
+                Chứng minh theo trình tự: $(a) \Rightarrow (b) \Rightarrow (c) \Rightarrow (d) \Rightarrow (a)$
+                \begin{itemize}
+                    \item $(a) \Rightarrow (b)$\\
+                        Chọn một vector ${\bf a} \gg 0$ sao cho ${\bf a} \gg {\bf Aa}$(Do $A$ là ma trận sản xuất) (Mỗi phần tử của ${\bf a}$ lớn hơn hẳn phần tử tương ứng của ${\bf Aa}$).\\ 
+                        Vì thế, $\exists \lambda$ trong (0,1) sao cho $\lambda{\bf a} \gg {\bf Aa} \gg 0$.\\
+                        Khi đó, $\lambda^2{\bf a} = \lambda(\lambda{\bf a}) \gg \lambda{\bf Aa} = {\bf A} \lambda {\bf a} \geq {\bf AAa} = {\bf A^2a}\gg 0$\\
+                        Bằng quy lạp, ta có $\lambda^m {\bf a} \gg {\bf A}^m{\bf a} $ với $m = 1,2,...$\\
+                        Khi $m \to \infty$ thì $\lambda^m {\bf a} \to 0$ ($\lambda < 1$)\\
+                        $\Rightarrow {\bf A}^m{\bf a} \to 0 \text{ khi } m \to \infty$ \\
+                        Có ${\bf A}^m{\bf a} = {\bf A}^m (\sum_{i=1}^n a_i {\bf e}_i) = \sum_{i=1}^n a_i {\bf A}^m {\bf e}_i \geq a_j {\bf A}^m {\bf e}_j $ với $j = 1,2..n$\\
+                        $\Rightarrow$ cột thứ $j$ -  ${\bf A}^m {\bf e}_j$  của ${\bf A}^m$ tiến đến ${\bf 0}$ khi $m \to \infty$\\
+                        $\Rightarrow {\bf A}^m \to {\bf 0}$ khi $m \to \infty$
+                    \item $(b) \Rightarrow (c)$\\
+                        Do định thức của một ma trận liên tục theo các phần tử của nó.\\
+                        $\Rightarrow \lim_{m \to \infty} |{\bf I} - {\bf A}^m| = |\lim_{m \to \infty} ({\bf I} - {\bf A}^m)| = 1 - 0 = 1  $\\
+                        $\Rightarrow |{\bf I} - {\bf A}^m| \neq 0$ với $m$ đủ lớn.\\
+                        Lại có, $({\bf I - A})({\bf I + A} + ... + {\bf A}^{m-1}) = {\bf I} - {\bf A}^m$\\
+                        $\Rightarrow |{\bf I - A}| \neq 0$\\
+                        $\Rightarrow {\bf I - A}$ khả nghịch.\\
+                        $\Rightarrow {\bf I + A} + ... + {\bf A}^{m-1} = ({\bf I - A})^{-1}({\bf I} - {\bf A}^m)$\\
+                        Khi $m \to \infty$ thì ${\bf I + A} + ... + {\bf A}^{m-1} = ({\bf I - A})^{-1}$  (đpcm)
+                    \item $(c) \Rightarrow (d)$ là điều hiển nhiên.
+                    \item $(d) \Rightarrow (a)$\\
+                        Chọn ${\bf y} \gg {\bf 0}$, đặt ${\bf x} = ({\bf I - A})^{-1}{\bf y}$\\
+                        $\Rightarrow {\bf x} \geq {\bf 0} \text{ và } ({\bf I - A}){\bf x} = {\bf y} \gg {\bf 0}$\\
+                        $\Rightarrow {\bf I}{\bf x} - {\bf A}{\bf x} \gg {\bf 0}$\\
+                        $\Rightarrow {\bf x} \gg {\bf A}{\bf x}$
+                        $\Rightarrow {\bf A}$ là ma trận sản xuất.             
+                \end{itemize}
+\end{document}
