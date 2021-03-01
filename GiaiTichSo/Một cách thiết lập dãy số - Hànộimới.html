@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/all.js" async="" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+	<meta http-equiv="REFRESH" content="1800">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+    <title>Một cách thiết lập dãy số - Hànộimới</title>
+    <meta name="keywords" content="Cấp số cộng là một dãy số mà số liền sau luôn hơn số đứng ngay trước nó một số không đổi, số đó gọi là công sai. Cấp số cộng tồn tại rất nhiều trong tự nhiên, đơn giản nhất là dãy số đếm 1, 2, 3...">
+    <meta name="description" content="Cấp số cộng là một dãy số mà số liền sau luôn hơn số đứng ngay trước nó một số không đổi, số đó gọi là công sai. Cấp số cộng tồn tại rất nhiều trong tự nhiên, đơn giản nhất là dãy số đếm 1, 2, 3...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" itemprop="url" content="http://hanoimoi.com.vn/Tin-tuc/Thieu-nhi/623672/mot-cach-thiet-lap-day-so">
+    <meta property="og:site_name" content="hanoimoi.com.vn">
+    <meta content="http://hanoimoi.com.vn/img/no-photo.jpg" itemprop="thumbnailUrl" property="og:image">
+    <meta property="og:title" content="Một cách thiết lập dãy số">
+    <meta property="og:description" content="Cấp số cộng là một dãy số mà số liền sau luôn hơn số đứng ngay trước nó một số không đổi, số đó gọi là công sai. Cấp số cộng tồn tại rất nhiều trong tự nhiên, đơn giản nhất là dãy số đếm 1, 2, 3...">
+    <link href="http://hanoimoi.com.vn/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/font-awesome.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/css.css" rel="stylesheet">
+    <link href="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/css_002.css" rel="stylesheet">
+	<link href="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/css_003.css" rel="stylesheet">
+
+    <script type="text/javascript" async="" src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/ga.js"></script><script id="twitter-wjs" src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/widgets.js"></script><script src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/modernizr"></script>
+
+    <script src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/jquery"></script>
+
+    <script src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/hnm"></script>
+
+	
+    <script src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/core.js"></script>
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head>
+<body class="fbonline">
+    
+
+
+<div class="headbar">
+    <!--div class="fix" style="background-image:url(/img/bg-tet.jpg);"-->
+	<div class="fix">
+        <div class="bgcover" style="background-image:url(/img/bg-head.jpg);">
+		<!--div class="bgcover"-->
+            <a class="mntoggle" id="MenuToggler" href="#"><span class="togbtn"></span></a>
+            <a class="logo" href="http://hanoimoi.com.vn/"></a>
+            <div class="srchbox">
+                <div class="socials">
+                    <a class="rss" href="#"><span class="fa fa-rss"></span></a>
+                    <a class="fbs" href="#"><span class="fa fa-facebook-f"></span></a>
+                    <a class="ggp" href="#"><span class="fa fa-google-plus"></span></a>
+                    <!--a class="ytb" href="#"><span class="fa fa-youtube"></span></a-->
+                    <!--a class="twt" href="#"><span class="fa fa-twitter-square"></span></a-->
+                </div>
+                
+
+
+<div class="weather lft">
+        <img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/04d.png">
+    Hà Nội <b>20°C</b>
+</div>
+
+
+                <span class="lft">NGÀY 30/03/2020</span>
+                <div class="clr"></div>
+                <form action="javascript:void(0)">
+                   <button class="srchbtn" id="btnSubmit" style="cursor:pointer;"><span class="fa fa-search"></span></button>
+                    <div class="srchtxt">
+                        <input type="text" class="txtKey" id="txtKey" placeholder="Tìm kiếm">
+                    </div>
+                </form>
+                <p>Đường dây nóng: 0912438855 - Email: dientu@hanoimoi.com.vn</p>
+            </div>
+            <div class="quklinks">
+                <a href="http://hanoimoi.com.vn/ReadPaper/?NewsID=1"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/npp.png">HNM Hằng ngày</a>
+                <a href="http://hanoimoi.com.vn/ReadPaper/?NewsID=7"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/npp.png">HNM Cuối tuần</a><br>
+                <a href="http://hanoimoi.com.vn/ReadPaper/?NewsID=6"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/mag.png">Hà Nội Ngày nay</a>
+                <a href="http://nhipsonghanoi.hanoimoi.com.vn/"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/onl.png">Nhịp sống Hà Nội</a>
+                <a href="http://hanoinews.com.vn/"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/onl.png">HanoiNews</a>
+            </div>
+            <div class="clr"></div>
+        </div>
+    </div>
+</div>
+
+
+    
+<div class="menubound">
+    <div class="menubar sticky" id="Menubar">
+        <div class="fix">
+            <div class="menunav">
+                <ul class="menufst nav">
+                        <li><a class="home" href="http://hanoimoi.com.vn/"><span class="fa fa-home"></span> Trang chủ</a></li>
+                                            <li>
+                            
+                                <a class="fst " href="http://hanoimoi.com.vn/Danh-muc-tin/192/Chinh-tri">Chính trị</a>
+                                <div class="backdrop"></div>
+                                <div class="drop">
+                                        <a href="http://hanoimoi.com.vn/Danh-muc-tin/223/Xay-dung-Dang">Xây dựng Đảng</a>
+                                        <a href="http://hanoimoi.com.vn/Danh-muc-tin/222/Doi-ngoai">Đối ngoại</a>
+                                        <a href="http://hanoimoi.com.vn/Danh-muc-tin/841/chong-tu-dien-bien">Phòng, chống tự diễn biến, tự chuyển hóa</a>
+                                </div>
+                        </li>
+                        <li>
+                            
+                                <a class="fst " href="http://hanoimoi.com.vn/Danh-muc-tin/190/Kinh-te">Kinh tế</a>
+                                <div class="backdrop"></div>
+                                <div class="drop">
+                                        <a href="http://hanoimoi.com.vn/Danh-muc-tin/188/Tai-chinh">Tài chính</a>
+                                        <a href="http://hanoimoi.com.vn/Danh-muc-tin/381/Doanh-nghiep">Doanh nghiệp - Doanh nhân</a>
+                                        <a href="http://hanoimoi.com.vn/Danh-muc-tin/181/Bat-dong-san">Bất động sản</a>
+                                        <a href="http://hanoimoi.com.vn/Danh-muc-tin/783/Nong-nghiep">Nông nghiệp</a>
+                                </div>
+                        </li>
+                        <li>
+                            
+                                <a class="fst " href="http://hanoimoi.com.vn/Danh-muc-tin/163/Xa-hoi">Xã hội</a>
+                                <div class="backdrop"></div>
+                                <div class="drop">
+                                        <a href="http://hanoimoi.com.vn/Danh-muc-tin/229/Cai-cach-hanh-chinh">Cải cách hành chính</a>
+                                        <a href="http://hanoimoi.com.vn/Danh-muc-tin/702/giao-thong">Giao thông</a>
+                                        <a href="http://hanoimoi.com.vn/Danh-muc-tin/228/Phong-su-Ky-su">Phóng sự</a>
+                                        <a href="http://hanoimoi.com.vn/Danh-muc-tin/341/Tu-van">Tư vấn</a>
+                                </div>
+                        </li>
+                        <li>
+                            
+                                <a class="fst " href="http://hanoimoi.com.vn/Danh-muc-tin/179/Van-hoa">Văn hóa</a>
+                                <div class="backdrop"></div>
+                                <div class="drop">
+                                        <a href="http://hanoimoi.com.vn/Danh-muc-tin/461/Sach">Sách</a>
+                                        <a href="http://hanoimoi.com.vn/Danh-muc-tin/226/Giai-tri">Giải trí</a>
+                                        <a href="http://hanoimoi.com.vn/su-kien/7196/nguoi-ha-noi-thanh-lich-van-minh">Người Hà Nội thanh lịch, văn minh</a>
+                                </div>
+                        </li>
+                        <li>
+                            
+                                <a class="fst " href="http://hanoimoi.com.vn/Danh-muc-tin/189/The-gioi">Thế giới</a>
+                                <div class="backdrop"></div>
+                                <div class="drop">
+                                        <a href="http://hanoimoi.com.vn/danh-muc-tin/621/Nguoi-Viet">Người Việt bốn phương</a>
+                                        <a href="http://hanoimoi.com.vn/Danh-muc-tin/763/Chuyen-la">Chuyện đó đây</a>
+                                        <a href="http://hanoimoi.com.vn/Danh-muc-tin/225/Ho-so">Hồ sơ</a>
+                                </div>
+                        </li>
+                        <li>
+                            
+                                <a class="fst " href="http://hanoimoi.com.vn/Danh-muc-tin/170/The-thao">Thể Thao</a>
+                                <div class="backdrop"></div>
+                                <div class="drop">
+                                        <a href="http://hanoimoi.com.vn/Danh-muc-tin/171/Bong-da">Bóng đá</a>
+                                </div>
+                        </li>
+                        <li>
+                            
+                                <a class="fst " href="http://hanoimoi.com.vn/Danh-muc-tin/164/Giao-duc">Giáo dục</a>
+                                <div class="backdrop"></div>
+                                <div class="drop">
+                                        <a href="http://hanoimoi.com.vn/Danh-muc-tin/261/Tuyen-sinh">Tuyển sinh</a>
+                                </div>
+                        </li>
+                        <li>
+                            
+                                <a class="fst " href="http://hanoimoi.com.vn/Danh-muc-tin/175/Phap-luat">Pháp luật</a>
+                                <div class="backdrop"></div>
+                                <div class="drop">
+                                        <a href="http://hanoimoi.com.vn/Danh-muc-tin/703/phap-dinh">Pháp đình</a>
+                                </div>
+                        </li>
+                        <li>
+                            
+                                <a class="fst " href="http://hanoimoi.com.vn/Danh-muc-tin/224/Doi-song">Đời sống</a>
+                                <div class="backdrop"></div>
+                                <div class="drop">
+                                        <a href="http://hanoimoi.com.vn/event/7359/phong-chong-Covid-19">Phòng, chống Covid-19</a>
+                                        <a href="http://hanoimoi.com.vn/Danh-muc-tin/281/Suc-khoe">Sức khỏe</a>
+                                        <a href="http://hanoimoi.com.vn/Danh-muc-tin/186/Tam-long-vang">Trái tim nhân ái</a>
+                                </div>
+                        </li>
+                        <li>
+                            
+                                <a class="fst " href="http://hanoimoi.com.vn/Danh-muc-tin/166/Du-lich">Du lịch</a>
+                        </li>
+                        
+                        
+                        
+                </ul>
+                <div class="menumore show" style="">
+                    <div class="morecapt"><span class="fa fa-ellipsis-h"></span></div>
+                    <div class="moreback"></div>
+                    <div class="moredrop">
+                        <ul class="nav" style="padding-left: 651.5px;"><li>
+                            
+                                <a class="fst " href="http://hanoimoi.com.vn/Danh-muc-tin/100/Khoa-hoc">Khoa học - Môi trường</a>
+                        </li><li>
+                            
+                                <a class="fst " href="http://hanoimoi.com.vn/Danh-muc-tin/601/Oto-xemay">Công nghệ - Xe+++</a>
+                        </li><li>
+                            
+                                <a class="fst " href="http://hanoimoi.com.vn/Danh-muc-tin/187/Ban-doc">Bạn đọc</a>
+                        </li></ul>
+                    </div>
+                </div>
+                <ul class="menuext nav">
+                    <li>
+                        <a class="multi fst" href="http://hanoimoi.com.vn/multimedia">Multimedia</a>
+                        <div class="backdrop"></div>
+                        <div class="drop">
+                            <a href="http://hanoimoi.com.vn/hinh-anh">Ảnh</a>
+                            <a href="http://hanoimoi.com.vn/video">Video</a>
+                            <a href="http://hanoimoi.com.vn/infographic">Infographic</a>
+                            <a href="http://hanoimoi.com.vn/megastorys">Megastory</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="last" href="http://hanoimoi.com.vn/tin-moi"><span class="fa fa-bell-o"></span> Tin mới <span class="counter">0</span></a>
+                    </li>
+                </ul>
+                <div class="clr"></div>
+                <div class="quklinks">
+                    <a href="http://hanoimoi.com.vn/ReadPaper/?NewsID=1"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/npp.html">HNM Hằng ngày</a>
+                    <a href="http://hanoimoi.com.vn/ReadPaper/?NewsID=7"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/npp.html">HNM Cuối tuần</a>
+                    <a href="http://hanoimoi.com.vn/ReadPaper/?NewsID=6"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/mag.html">Hà Nội Ngày nay</a>
+                    <a href="http://nhipsonghanoi.hanoimoi.com.vn/"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/onl.html">Nhịp sống Hà Nội</a>
+                    <a href="http://hanoinews.com.vn/"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/onl.html">HanoiNews</a>
+                </div>
+                <div class="srchbox">
+                    <div class="socials">
+                        <a class="rss" href="#"><span class="fa fa-rss"></span></a>
+                        <a class="fbs" href="#"><span class="fa fa-facebook-f"></span></a>
+                        <a class="ggp" href="#"><span class="fa fa-google-plus"></span></a>
+                    </div>
+                    <form>
+                        <button class="srchbtn" id="btnSearchMobile"><span class="fa fa-search"></span></button>
+                        <div class="srchtxt">
+                            <input type="text" id="txtSearchMobile" class="txtSearchMobile" placeholder="Tìm kiếm">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="clr"></div>
+    </div>
+</div>
+
+
+    
+
+<div class="fix">
+    <div class="clx"></div>
+    <div class="wrapp">
+        <div class="tripcol double">
+            <div id="NewsDetails" class="details">
+                <div class="breadcrum">
+                    <a href="http://hanoimoi.com.vn/">Trang chủ</a> › <a href="http://hanoimoi.com.vn/danh-muc-tin/241/kinh-te-TG">-----------</a> › <a class="activ" href="http://hanoimoi.com.vn/danh-muc-tin/441/Thieu-nhi">Điểm đến</a>
+                </div>
+                    <h1 class="caption">Một cách thiết lập dãy số</h1>
+                    <div class="descript">
+                        <div class="authinfo">
+                            <div class="author">
+                                <a class="name" href="#">Vũ Kim Thủy - Hoàng Trọng Hảo</a><span class="folw"></span>
+                                <a class="mail" href="mailto:dientu@hanoimoi.com.vn">dientu@hanoimoi.com.vn</a>
+                            </div>
+                            <div id="AuthorRater" class="rating" data-rated="4">
+                                <!-- append property [data-ratepath="http://..."] to call ajax to rate path -->
+                                <div class="capt">Đánh giá tác giả:</div>
+                                <span class="star activ" data-index="1" title="Tồi"></span>
+                                <span class="star activ" data-index="2" title="Kém"></span>
+                                <span class="star activ" data-index="3" title="Trung bình"></span>
+                                <span class="star activ" data-index="4" title="Khá"></span>
+                                <span class="star" data-index="5" title="Tốt"></span>
+                                <div class="clr"></div>
+                            </div>
+                        </div>
+                        <div class="definfo">
+                            <div class="period"><span class="fa fa-clock-o"></span> 07:51 chủ nhật ngày 13/10/2013</div>
+                            <div class="magnifier">
+                                <div class="frmshare lft">
+                                    <div class="fb-like fb_iframe_widget" data-href="http://hanoimoi.com.vn/Tin-tuc/Thieu-nhi/623672/mot-cach-thiet-lap-day-so" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=481358161896725&amp;container_width=130&amp;href=http%3A%2F%2Fhanoimoi.com.vn%2FTin-tuc%2FThieu-nhi%2F623672%2Fmot-cach-thiet-lap-day-so&amp;layout=button_count&amp;locale=vi_VN&amp;sdk=joey&amp;share=true&amp;show_faces=true"><span style="vertical-align: bottom; width: 137px; height: 20px;"><iframe name="fd6ed7b2fe39fe" data-testid="fb:like Facebook Social Plugin" title="fb:like Facebook Social Plugin" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" style="border: medium none; visibility: visible; width: 137px; height: 20px;" src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/like.html" class="" width="1000px" height="1000px" frameborder="0"></iframe></span></div>
+                                </div>
+                                <a href="javascript:void(0)" class="zoom-out" onclick="fontPlus();"><span class="tip">Tăng kích thước font chữ</span><span class="fa fa-search-plus"></span></a>
+                                <a href="javascript:void(0)" onclick="fontMinus();" class="zoom-in"><span class="tip">Giảm kích thước font chữ</span><span class="fa fa-search-minus"></span></a>
+                                <a class="prt" href="#"><span class="tip">In bài viết</span><span class="fa fa-print"></span></a>
+                                <a class="eml" href="#"><span class="tip">Gửi bài viết</span><span class="fa fa-envelope-o"></span></a>
+                                </div>
+                        </div>
+                        <div class="cls"></div>
+                    </div>
+                    <div class="content">
+                        <div class="newsref">
+                            <div class="clx"></div>
+                        </div>
+                        
+
+                        
+                        <div class="gallery-included">
+                            <div class="article">
+                                <div style="text-align: justify"><strong>Cấp
+ số cộng là một dãy số mà số liền sau luôn hơn số đứng ngay trước nó một
+ số không đổi, số đó gọi là công sai. Cấp số cộng tồn tại rất nhiều 
+trong tự nhiên, đơn giản nhất là dãy số đếm 1, 2, 3... Phương pháp sai 
+phân là từ một dãy số ban đầu, ta tính hiệu của số liền sau với số ngay 
+trước nó để được một dãy số mới là một cấp số cộng. <br>
+<br>
+</strong>Chẳng hạn với dãy số 5, 7, 11, 17, 25 thì các hiệu tương ứng 
+là: 7 - 5 = 2, 11 - 7 = 4, 17 - 11 = 6, 25 - 17 = 8. Ta được dãy số 2, 
+4, 6, 8 là một cấp số cộng có công sai bằng 2. Bài toán đặt ra là ta 
+phải tìm số tiếp theo sau số 25 của dãy số trên. Ta thấy số tiếp theo 
+của cấp số cộng là 10 nên số tiếp theo của dãy số là 25 + 10 = 35. Bài 
+toán trên là loại đơn giản trong những bài về sai phân. Trong tự nhiên, 
+có nhiều dãy số có quy luật mà nhờ đến phương pháp sai phân, sau một số 
+bước biến đổi sẽ ra một cấp số cộng. Trong lịch sử, những bài toán về 
+dãy số đều có từ xa xưa và xuất phát từ tự nhiên. Nền toán học Babylon 
+cổ đại đã ghi lại cách thức tính toán của một cấp số cộng. Phương pháp 
+sai phân hữu hạn thì được tìm ra và phát triển muộn hơn, khoảng thế kỷ 
+XVII - XVIII, chủ yếu ở Châu Âu. <br>
+Sau đây là một số ví dụ về việc thiết lập dãy số dựa trên sai phân. Dãy 
+số chính phương 1, 4, 9, 16, 25, 36, 49, 64, 81, 100... chỉ diện tích 
+những hình vuông có cạnh là những số đếm tăng dần là 1 x 1, 2 x 2, 3 x 
+3... Để tìm hai số tiếp theo của dãy, ta tính 11 x 11 = 121 và 12 x 12 =
+ 144. Tuy vậy có một cách khác để tính như sau: Dãy hiệu hai số liền 
+nhau là 3, 5, 7, 9, 11, 13, 15, 17, 19. Đây là một cấp số cộng có công 
+sai bằng 2. Hai số tiếp theo của cấp số cộng là 21, 23. Hai số tiếp theo
+ của dãy <br>
+số chính phương là 100 + 21 = 121, 121 + 23 = 144.<br>
+Dãy số chữ nhật 2, 6, 12, 20, 30, 42, 56, 72, 90... chỉ diện tích của 
+những hình chữ nhật có cạnh là hai số đếm hơn nhau một đơn vị như 1 x 2,<br>
+2 x 3, 3 x 4... Để tìm hai số tiếp theo của dãy số, ta lập dãy hiệu hai 
+số liền nhau của dãy số chữ nhật là 4, 6, 8, 10, 12, 14, 16, 18. Đây là 
+một cấp số cộng. Hai số tiếp theo của cấp số cộng là 20, 22. Hai số tiếp
+ theo của dãy số chữ nhật là 90 + 20 = 110 và 110 + 22 = 132. Thử lại 10
+ x 11 = 110, 11 x 12 = 132. <br>
+Dãy số lập phương 1, 8, 27, 64, 125, 216... chỉ thể tích những khối lập 
+phương có cạnh là những số đếm tăng dần như 1 x 1 x 1, 2 x 2 x 2... Để 
+thiết lập hai số tiếp theo ta lập dãy là những hiệu hai số liền nhau của
+ dãy số lập phương: 7, 19, 37, 61, 91 (1). Từ dãy này, ta tiếp tục tính 
+hiệu hai số liền nhau ta được dãy 12, 18, 24, 30. Đây là một cấp số cộng
+ có công sai bằng 6. Hai số tiếp theo của cấp số cộng là 36, 42. Hai số 
+tiếp theo của dãy số (1) là 91 + 36 = 127, 127 + 42 = 169. Hai số tiếp 
+theo của dãy lập phương là 216 + 127 = 343, 343 + 169 = 512. Thử lại 7 x
+ 7 x 7 = 343, <br>
+8 x 8 x 8 = 512. <br>
+Kết quả kỳ trước. Theo cách mà người Ấn Độ xưa đã dùng thì số 234 có thể
+ viết: 4, 3 chục, 2 trăm hoặc 4.3.2. Giải thưởng 50.000 đồng/<br>
+người trao cho bạn Nguyễn Thị Hồng Hải (Lớp 6D, THCS Tân Hưng, Sóc Sơn, Hà Nội)<br>
+<br>
+<span style="font-size:16px;">Kỳ này. Bằng phương pháp sai phân, em hãy tìm hai số tiếp theo của dãy số lập phương. <br>
+Câu trả lời gửi về chuyên mục "Toán học, học mà chơi", Tòa soạn Báo Hànộimới, 44 Lê Thái Tổ, Hoàn Kiếm, Hà Nội.</span></div>
+                            </div>
+                            <div class="gallery">
+                                <div class="capcover">
+                                    <a class="caption" href="#">
+                                        <span class="fa fa-arrow-left"></span>
+                                        Một cách thiết lập dãy số
+                                    </a>
+                                    <a class="galcloser" href="#"><span class="fa fa-close"></span> Đóng</a>
+                                    <a class="galplayer" href="#"><span class="fa fa-play"></span> Tự trình chiếu</a>
+                                    <a class="galpauser hide" href="#"><span class="fa fa-pause"></span> Dừng trình chiếu</a>
+                                </div>
+                                <a class="back" href="#"><span class="clkbtn"><span class="fa fa-angle-left"></span></span></a>
+                                <a class="next" href="#"><span class="clkbtn"><span class="fa fa-angle-right"></span></span></a>
+                            </div>
+                        </div>
+                        <div class="clx"></div>
+                        <div class="clx"></div>
+                        <div class="banner">
+                            
+
+
+
+                        </div>
+                        <div class="clx"></div>
+
+                        <div class="cls"></div>
+                    </div>
+                    <div class="sharebox sticky" style="top: 331.9px;">
+                        <a class="fbs" href="javascript:void(0);" onclick="share_facebook()"><span class="tip">Chia sẻ Facebook</span><span class="fa fa-facebook-f"></span></a>
+                        <a class="ggp" href="javascript:void(0);" onclick="share_google()"><span class="tip">Chia sẻ Google Plus</span><span class="fa fa-google-plus"></span></a>
+                        <a class="twr" href="javascript:void(0);" onclick="share_twitter()"><span class="tip">Chia sẻ Twitter</span><span class="fa fa-twitter"></span></a>
+                        <a class="zlo" href="#"><span class="tip">Chia sẻ Zalo</span>&nbsp;</a>
+                        <a class="cmt" href="#binh-luan"><span class="tip">Tới khu vực bình luận</span><span class="fa fa-commenting"></span></a>
+                        <a class="prt" href="http://hanoimoi.com.vn/ban-in/Thieu-nhi/623672/mot-cach-thiet-lap-day-so"><span class="tip">In bài viết</span><span class="fa fa-print"></span></a>
+                        <a class="eml" href="#"><span class="tip">Gửi bài viết</span><span class="fa fa-envelope-o"></span></a>
+                    </div>
+                    <div class="clx"></div>
+                    <div class="newshare">
+                        
+                    </div>
+                        <div class="taglist">
+                            <b class="caption">Từ khóa:</b>
+                                        <a <="" div="">
+                    <div class="cls"></div>
+            </a></div><a <="" div="">
+            <div class="clx"></div>
+           
+
+
+
+            <div class="clx"></div>
+            </a><a class="anchor" name="binh-luan"></a>
+
+<link rel="stylesheet" href="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/toastr.css" type="text/css">
+<script language="javascript" type="text/javascript" src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/toastr.js"></script>
+<script type="text/javascript">
+    var COMMENT_ID = 0;
+    var ARTICLE_ID = '623672';
+    var SORTMODE_INIT = '2';
+    $(document).ready(function () {
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": true,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "3000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+        loadComments(ARTICLE_ID, SORTMODE_INIT);
+        //Sort
+        $('#CommentBar a').on('click', function () {
+            $(this).parent().children().removeClass('sel');
+            $(this).addClass('sel');
+            var sortMode = $(this).attr('rel');
+            var articleId = $(this).attr('rev');
+            loadComments(articleId, sortMode);
+            return false;
+        });
+        //Reply
+        $('.irep').on('click', function () {
+            var commentId = $(this).attr('rel');
+            var articleId = $(this).attr('rev');
+            COMMENT_ID = commentId;
+            ARTICLE_ID = articleId;
+            $('.replying').focus();
+            return false;
+        });
+        //Like
+        $('.ilke').on('click', function () {
+            var commentId = $(this).attr('rel');
+            var totalLike = $(this).attr('rev');
+            var param = { commentId: commentId };
+            var curTag = $(this);
+            $.post("/Comment/ArticleLike", param, function (data) {
+                var status = data.status;
+                if (status == "0") {
+                    curTag.text((+totalLike + 1) + ' thích');
+                }
+            });
+            return false;
+        });
+        //Comment
+        $('#btnComment_' + ARTICLE_ID).on('click', function () {
+            var articleId = $(this).attr('rev');
+            ARTICLE_ID = articleId;
+            return false;
+        });
+        $('#btnSend_' + ARTICLE_ID).on('click', function () {
+            //username
+            var userName = $("#txtUserName_" + ARTICLE_ID).val();
+            if (userName == '' || userName.length < 0 || typeof (userName) == "undefined" || userName.length > 100 || userName == 'Họ tên hoặc nickname') {
+                $("#txtUserName_" + ARTICLE_ID).focus();
+                return false;
+            }
+            //email
+            var email = $("#txtEmail_" + ARTICLE_ID).val();
+            if (email == '' || email.length < 0 || typeof (email) == "undefined" || email.length > 100 || email == 'Địa chỉ email liên hệ') {
+                $("#txtEmail_" + ARTICLE_ID).focus();
+                return false;
+            }
+            if (!checkEmail(email)) {
+                $("#txtEmail_" + ARTICLE_ID).focus();
+                return false;
+            }
+            //content
+            var content = $("#hidmsg_" + ARTICLE_ID).val();
+            if (content == '' || content.length < 0 || typeof (content) == "undefined" || content.length > 4000 || content.length < 15) {
+                return false;
+            }
+            var CommentId = $("#hdfCommentId").val();
+            //post
+            var url = '/Comment/ArticleComment';
+            var param = { articleId: parseInt(ARTICLE_ID), commentId: parseInt(CommentId), username: userName, email: email, address: '', content: content };
+            var data = {
+                "articleId": ARTICLE_ID,
+                "commentId": CommentId,
+                "username": userName,
+                "email": email,
+                "address": "",
+                "content": content
+            };
+            $.ajax({
+                type: 'POST',
+                url: url, // we are calling json method
+                dataType: 'json',
+                data: param,
+                success: function (states) {
+                    var status = states.status;
+                    if (status == "0") {
+                        toastr.success('Cảm ơn bạn đã gửi góp ý.', 'Thành công');
+                        resetForm(ARTICLE_ID);
+                    }
+                },
+                error: function (ex) {
+
+                },
+                complete: function (jqXHR, textStatus) {
+                }
+            });
+            
+            //$.ajax(
+            //{
+            //    type: 'POST',
+            //    url: url,
+            //    data: param,
+            //    dataType: 'application/json',
+            //    success: function (data) {
+            //        alert(data);
+            //        alert(data.status);
+            //        var status = data.status;
+            //        if (status == "0") {
+            //            toastr.success('Cảm ơn bạn đã gửi góp ý.', 'Thành công');
+            //            resetForm(ARTICLE_ID);
+            //        }
+            //    },
+            //    error: function (res) {
+            //        alert(res);
+            //        var responseText = res.responseText;
+
+            //    }
+            //});
+            //$.post("/Comment/ArticleComment", param, function (data) {
+            //    var status = data.status;
+            //    if (status == "0") {
+            //        toastr.success('Cảm ơn bạn đã gửi góp ý.', 'Thành công');
+            //        resetForm(ARTICLE_ID);
+            //    }
+            //});
+            return false;
+        });
+    });
+    function resetForm(id) {
+        COMMENT_ID = 0;
+        $("#hdfCommentId").val("0");
+        e = $E('CommentBox_' + id); if (!e) return 0; e.vwr = $E('PopViewrComment_' + id); if (!e.vwr) return 0;
+        e.btn = $C(e, 'confirmer', '', 0); if (!e.btn) return 0;
+        e.txt = $C(e, 'message', '', 0); if (!e.txt) return 0;
+        e.con = $C(e.vwr, 'comm_confirm', '', 0); if (!e.con) return 0;
+        e.snd = $C(e.con, 'sending', '', 0); e.cls = $C(e.con, 'closing', '', 0);
+        e.hid = $C(e.con, 'hidmsg', '', 0);
+        e.rep = $C(e, 'replybox', '', 0);
+        e.rbf = $C(e.rep, 'replyform', '', 0);
+        e.rms = $C(e.rbf, 'replying', '', 0);
+        e.Pop = function (c, m, p) { e.vwr.style.display = c ? 'block' : 'none'; e.con.style.display = c ? 'block' : 'none'; if (e.hid && m) { e.hid.value = m; } if (p) { e.hid.form.action = p; } };
+        e.txt.value = e.txt.title; e.txt.title = '';
+        e.rms.value = e.rms.title; e.rms.title = ''; e.rbf.style.display = 'none';
+        e.Pop(0);
+    }
+    function loadComments(articleId, sortMode) {
+        $('#ListComment_' + articleId).load('/Comment/LoadComments', { articleId: articleId, sortMode: sortMode }, function (responseText, textStatus, XMLHttpRequest) {
+            var commConf = CommentPanelr('CommentBox_' + articleId, 'PopViewrComment_' + articleId);
+            var c = $E('ListComment_' + articleId);
+            var cl = $T(c, 'li');
+            if (cl.length > 0) {
+                $('#replybox_' + articleId).show();
+            }
+            else {
+                $('#replybox_' + articleId).hide();
+            }
+        });
+        return false;
+    }
+</script>
+    <a class="anchor" name="binh-luan"></a>
+    <div id="CommentBox_623672">
+        <div class="commentbox comments">
+            <div class="caption"><img class="avatar" src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/user.png">Bình luận </div>
+            <form id="PostComment" action="javascript:void(0)" target="_popout">
+                <textarea class="txtcmt message" maxlength="4000" placeholder="Mời bạn bình luận tại đây"></textarea>
+                <div class="cls"></div>
+                <button class="btnpost confirmer" type="submit" rev="623672" id="btnComment_623672" style="cursor:pointer;">Gửi đi<span class="fa fa-send"></span></button>
+                <p>* Nhập tiếng Việt có dấu</p>
+                <div class="cls"></div>
+            </form>
+        </div>
+        <div class="clx"></div>
+        <div class="replybox" id="replybox_623672" style="display: none;">
+            <div class="cap" id="CommentBar">Bình luận <a href="javascript:void(0)" rev="623672" rel="1">Mới nhất</a> <a href="javascript:void(0)" class="sel" rev="623672" rel="2">Hay nhất</a></div>
+            <div id="ListComment_623672">
+<div class="commentlst">
+    <ul class="lst">
+    </ul>
+</div>
+<form style="display: none;" action="#" class="replyform">
+    <textarea class="replying" maxlength="4000">Trả lời bình luận</textarea>
+    <div class="clx"></div>
+    <i class="lft">Gõ tiếng Việt có dấu, tối thiểu 15 chữ</i>
+    <input type="button" value=" Đóng lại " class="repcloser btn roboco rgt">
+    <input type="button" value=" Gửi trả lời " class="replier btn roboco rgt">
+    <div class="clr"></div>
+</form>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //Reply
+        $('.irep').on('click', function () {
+            var commentId = $(this).attr('rel');
+            var articleId = $(this).attr('rev');
+            $("#hdfCommentId").val(commentId);
+            $('.replying').focus();
+            return false;
+        });
+        //Like
+        $('.ilke').on('click', function () {
+            var commentId = $(this).attr('rel');
+            var totalLike = $(this).attr('rev');
+            var param = { commentId: commentId };
+            var curTag = $(this);
+            $.post("/Comment/ArticleLike", param, function (data) {
+                var status = data.status;
+                if (status == "0") {
+                    curTag.text((+totalLike + 1) + ' thích');
+                }
+            });
+            return false;
+        });
+    });
+</script>
+</div>
+        </div>
+        
+        <div class="popview" id="PopViewrComment_623672" style="display: none;">
+            <div class="alertbox" style="display: none;">
+                <div class="conform bdr">
+                    <div class="cap">Thông báo</div>
+                    <p class="message">Nội dung bình luận quá ngắn! Vui lòng nhập lại.</p>
+                    <div class="spt"></div>
+                    <div class="rgt">
+                        <input type="reset" value="Đóng" class="closing roboco lft">
+                    </div>
+                    <div class="clx"></div>
+                </div>
+            </div>
+            <div class="comm_confirm">
+                <div class="commentpop">
+                    <form action="javascript:void(0)" class="conform bdr">
+                        <div class="caption">Gửi bình luận</div>
+                        <p id="txtMsg" class="hide">Vui lòng nhập đầy đủ thông tin</p>
+                        <div class="txtcap">Họ tên:<span id="txtNameChk" class="hide">*</span></div>
+                        <input id="txtUserName_623672" class="txtbox">
+                        <div class="txtcap">Địa chỉ email:<span id="txtMailChk" class="hide">*</span></div>
+                        <input id="txtEmail_623672" class="txtbox">
+                        <input type="hidden" class="hidmsg" id="hidmsg_623672">
+                        <div class="cls"></div>
+                        <button type="reset" value="Đóng" class="closing btnpost" style="cursor:pointer;">Đóng<span class="fa fa-close"></span></button>
+                        <button id="btnSend_623672" class="btnpost" type="submit" style="cursor:pointer;">Gửi bình luận <span class="fa fa-send"></span></button>
+                        <div class="cls"></div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clx"></div>
+    <input type="hidden" id="hdfCommentId" value="0">
+    <div class="clx"></div>
+            <div class="clx"></div>
+            <div class="banner">
+                
+
+
+
+            </div>
+            <div class="clx"></div>
+            <div class="cathome">
+
+<div class="newstream">
+    <div class="caption"><h4 style="font-size:20px;">Tin cùng chuyên mục</h4></div>
+    <ul class="lst">
+        </ul>
+</div>
+            </div>
+            <div class="clx"></div>
+            <div class="banner">
+                
+
+
+
+            </div>
+            <div class="clx"></div>
+            <div class="catrelate">
+                <div class="caption">
+                    <h4>Có thể bạn quan tâm</h4>
+                    <div class="calendar" data-href="/moi-nhat/ngay-$DD-$MM-$YY.html" data-date="2018/02/01">
+                        <a class="calshow" href="#"><span class="fa fa-calendar"></span><span class="fa fa-close"></span>Xem tin theo ngày</a>
+                        <div class="calpop">
+                            <a class="back" href="#"><span class="fa fa-angle-left"></span></a>
+                            <a class="next" href="#"><span class="fa fa-angle-right"></span></a>
+                            <a class="swch" href="#">THÁNG 03/2020</a>
+                            <table class="caldate" cellspacing="0" cellpadding="0">
+                                <tbody><tr><th>T2</th><th>T3</th><th>T4</th><th>T5</th><th>T6</th><th>T7</th><th>CN</th></tr>
+                            <tr><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-01-03-2020.html">1</a></td></tr><tr><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-02-03-2020.html">2</a></td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-03-03-2020.html">3</a></td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-04-03-2020.html">4</a></td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-05-03-2020.html">5</a></td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-06-03-2020.html">6</a></td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-07-03-2020.html">7</a></td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-08-03-2020.html">8</a></td></tr><tr><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-09-03-2020.html">9</a></td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-10-03-2020.html">10</a></td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-11-03-2020.html">11</a></td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-12-03-2020.html">12</a></td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-13-03-2020.html">13</a></td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-14-03-2020.html">14</a></td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-15-03-2020.html">15</a></td></tr><tr><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-16-03-2020.html">16</a></td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-17-03-2020.html">17</a></td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-18-03-2020.html">18</a></td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-19-03-2020.html">19</a></td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-20-03-2020.html">20</a></td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-21-03-2020.html">21</a></td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-22-03-2020.html">22</a></td></tr><tr><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-23-03-2020.html">23</a></td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-24-03-2020.html">24</a></td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-25-03-2020.html">25</a></td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-26-03-2020.html">26</a></td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-27-03-2020.html">27</a></td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-28-03-2020.html">28</a></td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-29-03-2020.html">29</a></td></tr><tr><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-30-03-2020.html" class="now">30</a></td><td><a href="http://hanoimoi.com.vn/moi-nhat/ngay-31-03-2020.html">31</a></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr></tbody></table>
+                            <table class="calyear hide" cellspacing="0" cellpadding="0"></table>
+                        </div>
+                    </div>
+                </div>
+                <div class="cls"></div>
+                
+
+<ul class="nav">
+        <li>
+            <a class="catcap" href="http://hanoimoi.com.vn/danh-muc-tin/281/Suc-khoe">Sức khỏe</a>
+            <a href="http://hanoimoi.com.vn/tin-tuc/Suc-khoe/962731/chu-dong-phong-covid-19-o-nguoi-cao-tuoi">
+                <span class="thumb"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/Cham-Soc-Nguoi-Cao-Tuoi-Mac.jpg"></span>
+                <b>
+                    Chủ động phòng Covid-19 ở người cao tuổi
+                    <span class=""></span>
+                    
+                </b>
+            </a>
+        </li>
+        <li>
+            <a class="catcap" href="http://hanoimoi.com.vn/danh-muc-tin/189/The-gioi">Thế giới</a>
+            <a href="http://hanoimoi.com.vn/tin-tuc/The-gioi/962728/kinh-nghiem-dap-dich-covid-19-quan-trong-tu-y-thuc-cua-nguoi-dan">
+                <span class="thumb"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/Quan-Doi-Han-Quoc-Tien-Hanh.jpg"></span>
+                <b>
+                    Kinh nghiệm dập dịch Covid-19: Quan trọng từ ý thức của người dân
+                    <span class=""></span>
+                    
+                </b>
+            </a>
+        </li>
+        <li>
+            <a class="catcap" href="http://hanoimoi.com.vn/danh-muc-tin/163/Xa-hoi">Xã hội</a>
+            <a href="http://hanoimoi.com.vn/tin-tuc/Xa-hoi/962720/nguoi-dan-dong-thuan-thuc-hien-nghiem">
+                <span class="thumb"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/Dang-Vien-Can-Do-Hiep-55-N.jpg"></span>
+                <b>
+                    Người dân đồng thuận thực hiện nghiêm
+                    <span class=""></span>
+                    
+                </b>
+            </a>
+        </li>
+        <li>
+            <a class="catcap" href="http://hanoimoi.com.vn/danh-muc-tin/163/Xa-hoi">Xã hội</a>
+            <a href="http://hanoimoi.com.vn/tin-tuc/Xa-hoi/962709/de-moi-nguoi-dan-la-mot-chien-si-phong-chong-dich">
+                <span class="thumb"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/Thumbnails29072020090740khau%2520trang.jpg"></span>
+                <b>
+                    Để mỗi người dân là một chiến sĩ phòng, chống dịch
+                    <span class=""></span>
+                    
+                </b>
+            </a>
+        </li>
+        <li>
+            <a class="catcap" href="http://hanoimoi.com.vn/danh-muc-tin/163/Xa-hoi">Xã hội</a>
+            <a href="http://hanoimoi.com.vn/tin-tuc/Xa-hoi/962704/mot-so-che-do-dac-thu-trong-phong-chong-dich-covid-19">
+                <span class="thumb"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/covid1.jpg"></span>
+                <b>
+                    Một số chế độ đặc thù trong phòng, chống dịch Covid-19
+                    <span class=""></span>
+                    
+                </b>
+            </a>
+        </li>
+        <li>
+            <a class="catcap" href="http://hanoimoi.com.vn/danh-muc-tin/163/Xa-hoi">Xã hội</a>
+            <a href="http://hanoimoi.com.vn/tin-tuc/Xa-hoi/962698/xu-phat-hon-110-truong-hop-khong-deo-khau-trang-o-noi-cong-cong">
+                <span class="thumb"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/deokt1.jpg"></span>
+                <b>
+                    Xử phạt hơn 110 trường hợp không đeo khẩu trang ở nơi công cộng
+                    <span class=""></span>
+                    
+                </b>
+            </a>
+        </li>
+
+        <li>
+            <a class="catcap" href="http://hanoimoi.com.vn/danh-muc-tin/281/Suc-khoe">Sức khỏe</a>
+            <a href="http://hanoimoi.com.vn/tin-tuc/Suc-khoe/957109/dien-bien-moi-nhat-ve-dich-benh-viem-duong-ho-hap-cap-covid-19">
+                <span class="thumb"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/cap-nhat-corona.jpg"></span>
+                <b>
+                    Diễn biến mới nhất về dịch bệnh viêm đường hô hấp cấp Covid-19
+                    <span class="ivdupdate"></span>
+                    
+                </b>
+            </a>
+        </li>
+        <li>
+            <a class="catcap" href="http://hanoimoi.com.vn/danh-muc-tin/184/Luan-ban-Hanh-dong">Góc nhìn</a>
+            <a href="http://hanoimoi.com.vn/tin-tuc/Luan-ban-Hanh-dong/962725/tang-suc-de-khang-de-chong-tin-gia">
+                <span class="thumb"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/tungtin.jpg"></span>
+                <b>
+                    Tăng "sức đề kháng" để chống tin giả
+                    <span class=""></span>
+                    
+                </b>
+            </a>
+        </li>
+        <li>
+            <a class="catcap" href="http://hanoimoi.com.vn/danh-muc-tin/189/The-gioi">Thế giới</a>
+            <a href="http://hanoimoi.com.vn/tin-tuc/The-gioi/962716/cap-nhat-dich-covid-19-sang-30-3-nhieu-nuoc-gia-han-cac-bien-phap-gian-cach-xa-hoi">
+                <span class="thumb"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/TrungQuoc.jpg"></span>
+                <b>
+                    Cập nhật dịch Covid-19 sáng 30-3: Nhiều nước gia hạn các biện pháp giãn cách xã hội
+                    <span class=""></span>
+                    
+                </b>
+            </a>
+        </li>
+        <li>
+            <a class="catcap" href="http://hanoimoi.com.vn/danh-muc-tin/100/Khoa-hoc">Khoa học - Môi trường</a>
+            <a href="http://hanoimoi.com.vn/tin-tuc/Khoa-hoc/962715/ha-noi-mua-nho-buoi-sang-trua-chieu-troi-nang">
+                <span class="thumb"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/IMG_1664.jpg"></span>
+                <b>
+                    Hà Nội mưa nhỏ buổi sáng, trưa chiều trời nắng
+                    <span class="micon info"></span>
+                    
+                </b>
+            </a>
+        </li>
+        <li>
+            <a class="catcap" href="http://hanoimoi.com.vn/danh-muc-tin/281/Suc-khoe">Sức khỏe</a>
+            <a href="http://hanoimoi.com.vn/tin-tuc/Suc-khoe/962706/64-benh-nhan-covid-19-tai-nuoc-ta-da-co-ket-qua-xet-nghiem-am-tinh">
+                <span class="thumb"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/bn.jpg"></span>
+                <b>
+                    64 bệnh nhân Covid-19 tại nước ta đã có kết quả xét nghiệm âm tính
+                    <span class=""></span>
+                    
+                </b>
+            </a>
+        </li>
+        <li>
+            <a class="catcap" href="http://hanoimoi.com.vn/danh-muc-tin/281/Suc-khoe">Sức khỏe</a>
+            <a href="http://hanoimoi.com.vn/tin-tuc/Suc-khoe/962697/ra-soat-sang-loc-ky-nguoi-co-nguy-co-cao-mac-covid-19-lien-quan-benh-vien-bach-mai">
+                <span class="thumb"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/boyte.jpg"></span>
+                <b>
+                    Rà soát, sàng lọc kỹ người có nguy cơ cao mắc Covid-19 liên quan Bệnh viện Bạch Mai
+                    <span class=""></span>
+                    
+                </b>
+            </a>
+        </li>
+</ul>
+
+
+                <div class="clx"></div>
+            </div>
+        </div>
+        <div class="tripcol">
+            <div class="banner">
+                
+
+
+
+            </div>
+            <div class="clx"></div>
+            <div class="tophot expand">
+
+
+<div class="toptabs">
+    <a class="tab-select" rel="1" href="#top-read" style="display:none;">Tin nóng</a>
+    <a class="activ tab-select" href="#top-last" rel="2">Đọc nhiều</a>
+</div>
+<div id="top-read" class="tabitems" style="display:none;">
+    <ul class="lst">
+    </ul>
+</div>
+<div id="top-last" class="tabitems">
+    <ul class="lst">
+    </ul>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".tab-select").on('click', function () {
+            $(".tabitems").removeClass('hide');
+            var rel = $(this).attr('rel');
+            if (rel == 1) {
+                $("#top-read").addClass('tabitems');
+                $("#top-last").addClass('hide');
+            }
+            else {
+                $("#top-read").addClass('hide');
+                $("#top-last").addClass('tabitems');
+            }
+        });
+    });
+</script>            </div>
+            <div class="clx"></div>
+            <div class="banner">
+                
+<span id="lblAds" title="3a"><div align="center"><script async="" src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/adsbygoogle.js"></script>
+<!-- 300x250NSHN -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-8408701883082973" data-ad-slot="2406843919"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></span>
+
+
+            </div>
+            <div class="clx"></div>
+            <div class="innerstyle">
+                
+
+<div class="caption"><a href="http://nhipsonghanoi.hanoimoi.com.vn/"><h4>Nhịp sống Hà Nội</h4></a></div>
+<ul class="lst">
+        <li>
+            <a href="http://nhipsonghanoi.hanoimoi.com.vn/tin-tuc/thoi-su/822479/tra-da-via-he-vang-bong-tren-duong-pho-ha-noi">
+                <span class="thumb"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/Thumbnails28042020040458IMG_1557.JPG"></span>
+                <b>Trà đá vỉa hè vắng bóng trên đường phố Hà Nội</b>
+            </a>
+        </li>
+        <li>
+            <a href="http://nhipsonghanoi.hanoimoi.com.vn/tin-tuc/quy-hoach-do-thi/822477/dau-an-ve-quan-ly-do-thi">
+                <span class="thumb"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/Tuyen-duong-Nguyen-Van-Huye.jpg"></span>
+                <b>Dấu ấn về quản lý đô thị</b>
+            </a>
+        </li>
+        <li>
+            <a href="http://nhipsonghanoi.hanoimoi.com.vn/tin-tuc/nguoi-ha-noi/822476/nha-van---nha-bien-kich-doan-tuan-nhung-cau-chuyen-lap-lanh-ve-dep-con-nguoi">
+                <span class="thumb"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/phim-Song-cung-lich-su.jpg"></span>
+                <b>Nhà văn - nhà biên kịch Đoàn Tuấn: Những câu chuyện lấp lánh vẻ đẹp con người</b>
+            </a>
+        </li>
+        <li>
+            <a href="http://nhipsonghanoi.hanoimoi.com.vn/tin-tuc/thoi-su/822467/cau-chuyen-thanh-ha-xanh">
+                <span class="thumb"><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/thanh-ha.jpg"></span>
+                <b>Câu chuyện “Thanh Hà Xanh”</b>
+            </a>
+        </li>
+</ul>
+
+
+            </div>
+            <div class="clx"></div>
+            <div id="StickyBanner" class="banner" style="margin-top: 0px;">
+                
+
+
+
+            </div>
+        </div>
+        <div class="clx"></div>
+    </div>
+    <div class="clx"></div>
+</div>
+<div class="fix">
+    <div class="banner">
+        
+
+
+
+    </div>
+    <div class="clx"></div>
+    <div class="multimedia inner">
+        
+
+<div class="multibound">
+    <div class="caption"><a href="#"><h4>Multimedia</h4></a></div>
+    <div class="videomore slider">
+        <a class="back hide" href="javascript:void(0);"><span class="fa fa-angle-left"></span></a>
+        <a class="next waving" href="javascript:void(0);"><span class="fa fa-angle-right"></span></a>
+        <div class="scroller">
+            <ul class="nav scrlst" style="margin-left: 0px;">
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Chuyen-la/962745/tuyet-roi-bat-thuong-phu-trang-hoa-anh-dao-tokyo">
+                            <span class="thumb mda"><span class="fa fa-play"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/Thumbnails30142020091428Untitled-1.jpg"></span>
+                            Tuyết rơi bất thường phủ trắng hoa anh đào Tokyo
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/The-gioi/962739/nen-kinh-te-my-te-liet-qua-nhung-buc-anh-tu-tren-cao">
+                            <span class="thumb mda"><span class="fa fa-photo"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/Thumbnails304920200749594.jpg"></span>
+                            Nền kinh tế Mỹ tê liệt qua những bức ảnh từ trên cao
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Khoa-hoc/962715/ha-noi-mua-nho-buoi-sang-trua-chieu-troi-nang">
+                            <span class="thumb mda"><span class="fa fa-pie-chart"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/IMG_1664.jpg"></span>
+                            Hà Nội mưa nhỏ buổi sáng, trưa chiều trời nắng
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Du-lich/962688/thanh-pho-du-lich-vung-tau-vang-lang-giua-mua-dich-covid-19">
+                            <span class="thumb mda"><span class="fa fa-photo"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/767102a0-34fb-437d-9f5c-735cfaae7572.jpg"></span>
+                            Thành phố du lịch Vũng Tàu vắng lặng giữa mùa dịch Covid-19
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Xa-hoi/962684/ha-noi-hang-quan-dich-vu-cua-dong-then-cai-de-phong-dich">
+                            <span class="thumb mda"><span class="fa fa-photo"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/nc6.jpg"></span>
+                            Hà Nội: Hàng quán, dịch vụ "cửa đóng then cài" để phòng dịch
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Kinh-te/962651/kinh-te-viet-nam-trong-quy-dau-nam-2020">
+                            <span class="thumb mda"><span class="fa fa-pie-chart"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/baikinhte_SNIZ.jpg"></span>
+                            Kinh tế Việt Nam trong quý đầu năm 2020
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Xa-hoi/962644/sang-chu-nhat-ha-noi-vang-hang-an-sang-quan-ca-phe">
+                            <span class="thumb mda"><span class="fa fa-photo"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/IMG_1649.jpg"></span>
+                            Sáng chủ nhật, Hà Nội vắng hàng ăn sáng, quán cà phê
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Khoa-hoc/962617/bac-bo-nhieu-may-thoi-tiet-mat-diu">
+                            <span class="thumb mda"><span class="fa fa-pie-chart"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/Thumbnails2920202006205629-3-b.jpg"></span>
+                            Bắc Bộ nhiều mây, thời tiết mát dịu
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Xa-hoi/962607/tieu-doc-toan-bo-khong-gian-benh-vien-bach-mai">
+                            <span class="thumb mda"><span class="fa fa-photo"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/Thumbnails2824202007242790677222_547412809232597_13058684897.jpg"></span>
+                            Tiêu độc toàn bộ không gian Bệnh viện Bạch Mai
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/giao-thong/962604/con-xe-van-tai-hanh-khach-chua-tuan-thu-nghiem-viec-phong-chong-dich">
+                            <span class="thumb mda"><span class="fa fa-photo"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/Thumbnails28582020065829_nh-11.jpg"></span>
+                            Còn xe vận tải hành khách chưa tuân thủ nghiêm việc phòng, chống dịch
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Xa-hoi/962589/da-so-chap-hanh-song-con-tinh-trang-nua-dong-nua-mo-de-ban-hang">
+                            <span class="thumb mda"><span class="fa fa-photo"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/ca-nhac-nho.jpg"></span>
+                            Đa số chấp hành, song còn tình trạng “nửa đóng, nửa mở” để bán hàng
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Doi-song/962578/can-bo-benh-vien-cho-ray-tu-lam-tam-chan-ngan-giot-ban-tang-dong-nghiep">
+                            <span class="thumb mda"><span class="fa fa-play"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/41.jpg"></span>
+                            Cán bộ Bệnh viện Chợ Rẫy tự làm tấm chắn ngăn giọt bắn tặng đồng nghiệp
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Xa-hoi/962560/thanh-pho-ho-chi-minh-yen-vang-trong-ngay-dau-thuc-hien-han-che-tu-tap-noi-cong-cong">
+                            <span class="thumb mda"><span class="fa fa-photo"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/C3.jpg"></span>
+                            Thành phố Hồ Chí Minh yên vắng trong ngày đầu thực hiện hạn chế tụ tập nơi công cộng
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Doi-song/962557/sieu-thi-cho-dan-sinh-hang-hoa-doi-dao-gia-on-dinh">
+                            <span class="thumb mda"><span class="fa fa-photo"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/Thumbnails285120201051263.jpg"></span>
+                            Siêu thị, chợ dân sinh hàng hóa dồi dào, giá ổn định
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Doi-song/962541/xuong-pho-tap-the-duc-som-nguoi-dan-lien-tuc-duoc-nhac-deo-khau-trang">
+                            <span class="thumb mda"><span class="fa fa-photo"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/IMG_1391.jpg"></span>
+                            Xuống phố tập thể dục sớm, người dân liên tục được nhắc đeo khẩu trang
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Khoa-hoc/962524/ha-noi-mat-diu-nhung-ngay-cuoi-tuan">
+                            <span class="thumb mda"><span class="fa fa-pie-chart"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/KT.jpg"></span>
+                            Hà Nội mát dịu những ngày cuối tuần
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Kinh-te/962470/thanh-pho-ho-chi-minh-nghiem-tuc-tuan-thu-quy-dinh-phong-chong-dich-covid-19">
+                            <span class="thumb mda"><span class="fa fa-photo"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/B1.jpg"></span>
+                            Thành phố Hồ Chí Minh: Nghiêm túc tuân thủ quy định phòng, chống dịch Covid-19
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Xa-hoi/962448/pho-xa-ha-noi-tinh-lang-sau-khi-tam-dung-cac-dich-vu-khong-thiet-yeu-de-phong-dich">
+                            <span class="thumb mda"><span class="fa fa-photo"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/Thumbnails27252020122507IMG_1286.jpg"></span>
+                            Phố xá Hà Nội tĩnh lặng sau khi tạm dừng các dịch vụ không thiết yếu để phòng dịch
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Khoa-hoc/962402/mien-bac-dem-se-lanh-ngay-nang-nong">
+                            <span class="thumb mda"><span class="fa fa-pie-chart"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/Thumbnails2721202006210027-3-b.jpg"></span>
+                            Miền Bắc đêm se lạnh, ngày nắng nóng
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Xa-hoi/962396/on-dinh-tinh-hinh-tai-cac-dia-diem-co-nguoi-nhiem-covid-19-tung-den">
+                            <span class="thumb mda"><span class="fa fa-photo"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/1.jpg"></span>
+                            Ổn định tình hình tại các địa điểm có người nhiễm Covid-19 từng đến
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Doi-song/962363/kinh-doanh-thoi-covid-19-nguoi-chu-dong-phong-dich-ke-tho-o">
+                            <span class="thumb mda"><span class="fa fa-photo"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/co11.jpg"></span>
+                            Kinh doanh thời Covid-19: Người chủ động phòng dịch, kẻ thờ ơ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Tai-chinh/962361/huong-dan-tra-luong-cho-nguoi-bi-ngung-viec-do-covid-19">
+                            <span class="thumb mda"><span class="fa fa-play"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/tien_luong.jpg"></span>
+                            Hướng dẫn trả lương cho người bị ngừng việc do Covid-19
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Xa-hoi/962358/ghi-nhan-ngay-dau-thuc-hien-tam-ngung-hoat-dong-hang-quan-de-phong-dich">
+                            <span class="thumb mda"><span class="fa fa-photo"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/a4.jpg"></span>
+                            Ghi nhận ngày đầu thực hiện tạm ngừng hoạt động hàng quán để phòng dịch
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Suc-khoe/962351/cac-benh-vien-tang-cuong-kiem-soat-phong-chong-dich-covid-19">
+                            <span class="thumb mda"><span class="fa fa-photo"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/bv7.jpg"></span>
+                            Các bệnh viện tăng cường kiểm soát phòng, chống dịch Covid-19
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Giai-tri/962350/nhom-xam-ha-thanh-ra-mat-tac-pham-tieu-tru-corona">
+                            <span class="thumb mda"><span class="fa fa-play"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/xam-ha-thanh.jpg"></span>
+                            Nhóm Xẩm Hà thành ra mắt tác phẩm "Tiễu trừ corona"
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Doi-song/962314/sang-26-3-con-nhieu-quan-ca-phe-hang-an-sang-van-don-khach">
+                            <span class="thumb mda"><span class="fa fa-photo"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/Thumbnails26172020101747IMG_1188.jpg"></span>
+                            Sáng 26-3: Còn nhiều quán cà phê, hàng ăn sáng vẫn đón khách
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Khoa-hoc/962287/bac-bo-tang-nhiet-can-de-phong-mua-dong">
+                            <span class="thumb mda"><span class="fa fa-pie-chart"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/Thumbnails2624202006241826-3-b.jpg"></span>
+                            Bắc Bộ tăng nhiệt, cần đề phòng mưa dông
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Xa-hoi/962285/ha-noi-hang-loat-hang-quan-dong-cua-phong-chong-dich-covid-19">
+                            <span class="thumb mda"><span class="fa fa-photo"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/IMG_1088.JPG"></span>
+                            Hà Nội: Hàng loạt hàng quán đóng cửa phòng, chống dịch Covid-19
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/Xa-hoi/962228/chong-dich-covid-19-con-tinh-trang-tu-tap-tai-quan-bia-ca-phe-dia-diem-cong-cong">
+                            <span class="thumb mda"><span class="fa fa-photo"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/_nh-5--bia-Hu-nh-Thc-khng.jpg"></span>
+                            Chống dịch Covid-19: Còn tình trạng tụ tập tại quán bia, cà phê, địa điểm công cộng
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hanoimoi.com.vn/tin-tuc/giao-thong/962199/quyet-tam-hoan-thanh-thay-the-53-khe-co-gian-duong-vanh-dai-3-truoc-ngay-25-4">
+                            <span class="thumb mda"><span class="fa fa-photo"></span><img src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/e7f4ef5a-4073-4571-b6e9-a0ad2b9b3cd5.jpg"></span>
+                            Quyết tâm hoàn thành thay thế 53 khe co giãn đường Vành đai 3 trước ngày 25-4
+                        </a>
+                    </li>
+            </ul>
+            <div class="cls"></div>
+        </div>
+        <div class="pager"><a href="#0" class="activ"></a><a href="#1"></a><a href="#2"></a><a href="#3"></a><a href="#4"></a><a href="#5"></a><a href="#6"></a><a href="#7"></a></div>
+    </div>
+</div>
+
+
+
+
+    </div>
+    <div class="clx"></div>
+     <div class="quklnk">
+        
+    </div>
+</div>
+<div class="clx"></div><div class="clx"></div>
+
+
+    
+
+
+<div class="footbar">
+    <div class="fix">
+        <div class="clx"></div><div class="clx"></div><div class="clx"></div>
+        <div class="catlst">
+            <ul class="lst">
+                <li class="fst"><a href="http://hanoimoi.com.vn/Danh-muc-tin/192/Chinh-tri">Chính trị</a></li>
+                <li><a href="http://hanoimoi.com.vn/Danh-muc-tin/841/chong-tu-dien-bien">Xây dựng Đảng</a></li>
+				<li><a href="http://hanoimoi.com.vn/Danh-muc-tin/222/Doi-ngoai">Đối ngoại</a></li>
+                <li><a href="http://hanoimoi.com.vn/Danh-muc-tin/165/To_chuc-Can_bo">Nhận diện</a></li>
+                <li>&nbsp;</li>
+                
+            </ul>
+            <ul class="lst">
+                <li class="fst"><a href="http://hanoimoi.com.vn/Danh-muc-tin/190/Kinh-te">Kinh tế</a></li>
+                <li><a href="http://hanoimoi.com.vn/Danh-muc-tin/188/Chung-khoan">Tài chính</a></li>
+				<li><a href="http://hanoimoi.com.vn/Danh-muc-tin/381/Doanh-nghiep">Doanh nghiệp - Doanh nhân</a></li>
+                <li><a href="http://hanoimoi.com.vn/Danh-muc-tin/181/Bat-dong-san">Bất động sản</a></li>
+                <li><a href="http://hanoimoi.com.vn/Danh-muc-tin/783/Nong-nghiep">Nông nghiệp</a></li>
+                
+            </ul>
+            <ul class="lst">
+                <li class="fst"><a href="http://hanoimoi.com.vn/Danh-muc-tin/163/Xa-hoi">Xã hội</a></li>
+                <li><a href="http://hanoimoi.com.vn/Danh-muc-tin/229/Cai-cach-hanh-chinh">Cải cách hành chính</a></li>
+				<li><a href="http://hanoimoi.com.vn/Danh-muc-tin/702/giao-thong">Giao thông</a></li>
+                <li><a href="http://hanoimoi.com.vn/danh-muc-tin/228/Phong-su-Ky-su">Phóng sự</a></li>
+				<li><a href="http://hanoimoi.com.vn/Danh-muc-tin/341/Tu-van">Tư vấn</a></li>
+                
+            </ul>
+			<ul class="lst">
+                <li class="fst"><a href="http://hanoimoi.com.vn/Danh-muc-tin/189/The-gioi">Thế giới</a></li>
+                <li><a href="http://hanoimoi.com.vn/Danh-muc-tin/621/Nguoi-viet">Người việt bốn phương</a></li>
+                <li><a href="http://hanoimoi.com.vn/Danh-muc-tin/763/Chuyen-la">Chuyện đó đây</a></li>
+				<li><a href="http://hanoimoi.com.vn/Danh-muc-tin/225/Ho-so">Hồ sơ</a></li>
+                <li>&nbsp;</li>
+            </ul>
+			<ul class="lst">
+                <li class="fst"><a href="http://hanoimoi.com.vn/Danh-muc-tin/179/Van-hoa">Văn hóa</a></li>
+                <li><a href="http://hanoimoi.com.vn/Danh-muc-tin/461/sach">Sách</a></li>
+				<li><a href="http://hanoimoi.com.vn/Danh-muc-tin/226/Giai-tri">Giải trí</a></li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+            </ul>
+			<ul class="lst">
+                <li class="fst"><a href="http://hanoimoi.com.vn/Danh-muc-tin/224/Doi-song">Đời sống</a></li>
+                <li><a href="http://hanoimoi.com.vn/Danh-muc-tin/281/Suc-khoe">Sức khỏe</a></li>
+                <li><a href="http://hanoimoi.com.vn/Danh-muc-tin/186/Tam-long-vang">Trái tim nhân ái</a></li>
+				<li>&nbsp;</li>
+                <li>&nbsp;</li>
+            </ul>
+			<ul class="lst">
+                <li class="fst"><a href="http://hanoimoi.com.vn/Danh-muc-tin/164/Giao-duc">Giáo dục</a></li>
+                <li><a href="http://hanoimoi.com.vn/Danh-muc-tin/261/Tuyen-sinh">Tuyển sinh</a></li>
+                <li>&nbsp;</li>
+                
+            </ul>
+            <ul class="lst">
+                <li class="fst"><a href="http://hanoimoi.com.vn/Danh-muc-tin/170/The-thao">Thể thao</a></li>
+                <!--li><a href="/Danh-muc-tin/227/V-League">Bóng đá Việt Nam</a></li-->
+                <li><a href="http://hanoimoi.com.vn/Danh-muc-tin/171/Bong-da">Bóng đá</a></li>
+                <li>&nbsp;</li>
+                
+            </ul>
+            <ul class="lst">
+                <li class="fst"><a href="http://hanoimoi.com.vn/Danh-muc-tin/100/Khoa-hoc">Khoa học</a></li>
+                <!--li><a href="/Danh-muc-tin/182/Cong-nghe">Thế giới số</a></li>
+                <li><a href="/Danh-muc-tin/782/Dien-thoai">Sản phẩm số</a></li-->
+                <li>&nbsp;</li>
+				<li>&nbsp;</li>
+            </ul>
+            <ul class="lst">
+                <li class="fst"><a href="http://hanoimoi.com.vn/Danh-muc-tin/175/Phap-luat">Pháp luật</a></li>
+                <li><a href="http://hanoimoi.com.vn/Danh-muc-tin/703/phap-dinh">Pháp đình</a></li>
+                <li>&nbsp;</li>
+                
+            </ul>
+           
+            <div class="clr"></div>
+        </div>
+    </div>
+    <div class="bott">
+        <div class="fix">
+            <div class="clx"></div>
+            <ul class="lst">
+                <li>
+                    Bản quyền © 2003-2019 Báo Hànộimới - <br class="mshow">Cơ quan chủ quản: Thành ủy Hà Nội<br>
+                    Giấy phép số 122/GP-BTTTT, cấp ngày: 23/3/2017.<br>
+                    Địa chỉ: 44 Lê Thái Tổ - Hà Nội.<br>ĐT (024) 38253067 – 39287445
+                </li>
+                <li style="line-height:1.5em;">
+                    Tổng Biên tập: NGUYỄN HOÀNG LONG<br>
+                    Các Phó Tổng Biên tập: MAI THỊ KIM THOA, LƯƠNG CHÍ CÔNG, LÊ HOÀNG ANH<br>Trưởng ban biên tập: LÊ THỊ HƯƠNG<br>
+                    Liên hệ tòa soạn: dientu@hanoimoi.com.vn<br>
+					Liên hệ quảng cáo: 0904180943 - (024) 39286000 . 
+                    Báo giá quảng cáo: <a href="http://hanoimoi.com.vn/files/BanggiaqcHNMO.html" target="_blank" style="display:inline;color:#fff;">Báo điện tử</a> | <a href="http://hanoimoi.com.vn/files/BanggiaqcHNM.html" target="_blank" style="display:inline;color:#fff;">Báo giấy</a>
+                </li>
+               
+            </ul>
+            <div class="clx"></div>
+        </div>
+    </div>
+    <div class="fix">
+        <div class="caption">
+            <div class="halfcol"><i>Ghi rõ nguồn "Báo Hànộimới" khi phát hành lại thông tin từ website này.</i></div>
+            <div class="halfcol">
+                <a href="#"><span class="fa fa-angle-up"></span> Về đầu trang</a>
+                <a href="#"><span class="fa fa-star-o"></span> Đặt làm trang chủ</a>
+            </div>
+            <div class="cls"></div>
+        </div>
+    </div>
+</div>
+
+    <a id="UpToppr" class="gotop" href="#"><span class="fa fa-angle-up"></span></a>
+    <div class="adfloat-lft">
+        
+
+
+
+    </div>
+    <div class="adfloat-rgt">
+        
+
+
+
+    </div>
+    
+    <script type="text/javascript">
+        var currentKey = '';
+        $(document).ready(function () {
+            $(".ads").each(function () {
+                if ($(this).attr("title") != currentKey) {
+                    currentKey = $(this).attr("title");
+                    $(this).removeClass("hide_ads").addClass("firstAds");
+                }
+
+            });
+            setInterval("swapAds()", 10000);
+        });
+        function swapAds() {
+            $(".ads:not(.hide_ads)").each(
+                function () {
+                    if ($(this).nextAll(".ads").length <= 0)
+                        $(this).prevAll(".firstAds").removeClass("hide_ads");
+                    else
+                        $(this).next(".ads").removeClass("hide_ads");
+                    $(this).addClass("hide_ads");
+
+                });
+        }
+    </script>
+	<script src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/fb.js"></script>
+	<script type="text/javascript">
+        !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');
+    </script>
+   <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script><script src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/ga.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-12223163-1");
+            pageTracker._trackPageview();
+        } catch (err) { }
+    </script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-24117866-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+
+
+</div><iframe scrolling="no" allowtransparency="true" src="M%E1%BB%99t%20c%C3%A1ch%20thi%E1%BA%BFt%20l%E1%BA%ADp%20d%C3%A3y%20s%E1%BB%91%20-%20H%C3%A0n%E1%BB%99im%E1%BB%9Bi_files/widget_iframe.html" title="Twitter settings iframe" style="display: none;" frameborder="0"></iframe><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div></body></html>

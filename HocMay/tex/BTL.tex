@@ -1,0 +1,36 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amsxtra,amssymb,latexsym, amscd,amsthm}
+\usepackage{indentfirst}
+\usepackage[mathscr]{eucal}
+\usepackage[utf8]{vietnam}
+\usepackage{graphicx,color}
+\usepackage{fancyhdr}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{animate}
+\usepackage{spverbatim}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{fancyvrb}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\pagestyle{fancyplain}
+\pagestyle{fancy}
+\textheight 22truecm %%16.2truecm 
+\textwidth 14truecm 
+\parskip 3pt
+\headsep=12pt
+\renewcommand{\headwidth}{\textwidth}
+\renewcommand{\sectionmark}[1]{\markright{\it \thesection. #1}}
+\lhead[\fancyplain{}{\thepage}]{\fancyplain{}{\rightmark}}
+\rhead[\fancyplain{}{\leftmark}]{\fancyplain{}{\thepage}}
+\cfoot{}
+\sloppy
+\makeatletter\@addtoreset{section}{part}\makeatother %.......
+\begin{document}
+  \input Cover.tex
+\end{document}

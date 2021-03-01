@@ -1,0 +1,811 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.9)  29 JUN 2020 14:39
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Cover.tex
+(./Cover.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14>
+
+! LaTeX Error: Environment titlepage undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \begin{titlepage}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3     \begin{center}
+                      
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 3--3
+[] 
+ []
+
+
+! LaTeX Error: Command \DJ unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4         {\bfseries Đ
+                         ẠI HỌC THĂNG LONG\\Khoa Toán - Tin}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode character Ạ (U+1EA0)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4         {\bfseries ĐẠ
+                            I HỌC THĂNG LONG\\Khoa Toán - Tin}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character Ọ (U+1ECC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4         {\bfseries ĐẠI HỌ
+                                  C THĂNG LONG\\Khoa Toán - Tin}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+Overfull \hbox (4.36108pt too wide) in paragraph at lines 4--4
+ \OT1/cmr/bx/n/10 I 
+ []
+
+
+Overfull \hbox (17.30547pt too wide) in paragraph at lines 4--4
+ \OT1/cmr/bx/n/10 HC 
+ []
+
+
+Overfull \hbox (43.73587pt too wide) in paragraph at lines 4--4
+ \OT1/cmr/bx/n/10 TH[]ANG 
+ []
+
+
+Overfull \hbox (33.59703pt too wide) in paragraph at lines 4--4
+ \OT1/cmr/bx/n/10 LONG 
+ []
+
+
+Overfull \hbox (26.74289pt too wide) in paragraph at lines 4--5
+ []\OT1/cmr/bx/n/10 Khoa 
+ []
+
+
+Overfull \hbox (24.77068pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/10 To^^San 
+ []
+
+
+Overfull \hbox (3.83331pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/10 - 
+ []
+
+
+Overfull \hbox (17.58324pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/10 Tin 
+ []
+
+
+! LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6     \begin{figure}
+                      [!ht]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+! Undefined control sequence.
+l.8         \includegraphics
+                            [scale = 0.4]{LogoTLU}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no U in font nullfont!
+
+! LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9     \end{figure}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Missing character: There is no ` in font nullfont!
+! Undefined control sequence.
+l.11 `       {\Large
+                     \bfseries BÀI TẬP LỚN\\}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! Package inputenc Error: Unicode character Ậ (U+1EAC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 `       {\Large \bfseries BÀI TẬ
+                                        P LỚN\\}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character Ớ (U+1EDA)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 `       {\Large \bfseries BÀI TẬP LỚ
+                                              N\\}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+Overfull \hbox (21.236pt too wide) in paragraph at lines 11--11
+ \OT1/cmr/bx/n/10 B[]AI 
+ []
+
+
+Overfull \hbox (15.86102pt too wide) in paragraph at lines 11--11
+ \OT1/cmr/bx/n/10 TP 
+ []
+
+
+Overfull \hbox (15.91658pt too wide) in paragraph at lines 11--11
+ \OT1/cmr/bx/n/10 LN 
+ []
+
+! Undefined control sequence.
+l.13         {\huge
+                    \bfseries  Sử dụng Maple biểu diễn bài toán t�...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! Package inputenc Error: Unicode character ử (U+1EED)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13         {\huge \bfseries  Sử
+                                    dụng Maple biểu diễn bài toán t�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ụ (U+1EE5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13         {\huge \bfseries  Sử dụ
+                                        ng Maple biểu diễn bài toán t�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ể (U+1EC3)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ... {\huge \bfseries  Sử dụng Maple biể
+                                                  u diễn bài toán tìm b...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ễ (U+1EC5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ... \bfseries  Sử dụng Maple biểu diễ
+                                                  n bài toán tìm bao lồ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ồ (U+1ED3)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...ple biểu diễn bài toán tìm bao lồ
+                                                  i trên mặt phẳng vớ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ặ (U+1EB7)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...iễn bài toán tìm bao lồi trên mặ
+                                                  t phẳng với thuật to...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ẳ (U+1EB3)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...ài toán tìm bao lồi trên mặt phẳ
+                                                  ng với thuật toán chu...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ớ (U+1EDB)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...�n tìm bao lồi trên mặt phẳng vớ
+                                                  i thuật toán chuỗi đ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ậ (U+1EAD)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...bao lồi trên mặt phẳng với thuậ
+                                                  t toán chuỗi đơn đi�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ỗ (U+1ED7)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...n mặt phẳng với thuật toán chuỗ
+                                                  i đơn điệu - Monotone...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Command \dj unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...��t phẳng với thuật toán chuỗi đ
+                                                  ơn điệu - Monotone cha...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode character ơ (U+01A1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...t phẳng với thuật toán chuỗi đơ
+                                                  n điệu - Monotone chain.}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Command \dj unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...ẳng với thuật toán chuỗi đơn đ
+                                                  iệu - Monotone chain.}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode character ệ (U+1EC7)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...g với thuật toán chuỗi đơn điệ
+                                                  u - Monotone chain.}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+Overfull \hbox (6.38885pt too wide) in paragraph at lines 13--14
+ []\OT1/cmr/bx/n/10 S 
+ []
+
+
+Overfull \hbox (18.52768pt too wide) in paragraph at lines 13--14
+ \OT1/cmr/bx/n/10 dng 
+ []
+
+
+Overfull \hbox (31.36093pt too wide) in paragraph at lines 13--14
+ \OT1/cmr/bx/n/10 Maple 
+ []
+
+
+Overfull \hbox (15.97214pt too wide) in paragraph at lines 13--14
+ \OT1/cmr/bx/n/10 biu 
+ []
+
+
+Overfull \hbox (15.97214pt too wide) in paragraph at lines 13--14
+ \OT1/cmr/bx/n/10 din 
+ []
+
+
+Overfull \hbox (15.17351pt too wide) in paragraph at lines 13--14
+ \OT1/cmr/bx/n/10 b^^Rai 
+ []
+
+
+Overfull \hbox (22.20125pt too wide) in paragraph at lines 13--14
+ \OT1/cmr/bx/n/10 to^^San 
+ []
+
+
+Overfull \hbox (17.24991pt too wide) in paragraph at lines 13--14
+ \OT1/cmr/bx/n/10 t^^R^^Pm 
+ []
+
+
+Overfull \hbox (17.72905pt too wide) in paragraph at lines 13--14
+ \OT1/cmr/bx/n/10 bao 
+ []
+
+
+Overfull \hbox (6.38885pt too wide) in paragraph at lines 13--14
+ \OT1/cmr/bx/n/10 li 
+ []
+
+
+Overfull \hbox (20.86797pt too wide) in paragraph at lines 13--14
+ \OT1/cmr/bx/n/10 tr^en 
+ []
+
+
+Overfull \hbox (14.05548pt too wide) in paragraph at lines 13--14
+ \OT1/cmr/bx/n/10 mt 
+ []
+
+
+Overfull \hbox (24.91653pt too wide) in paragraph at lines 13--14
+ \OT1/cmr/bx/n/10 phng 
+ []
+
+
+Overfull \hbox (9.26384pt too wide) in paragraph at lines 13--14
+ \OT1/cmr/bx/n/10 vi 
+ []
+
+
+Overfull \hbox (21.40266pt too wide) in paragraph at lines 13--14
+ \OT1/cmr/bx/n/10 thut 
+ []
+
+
+Overfull \hbox (22.20125pt too wide) in paragraph at lines 13--14
+ \OT1/cmr/bx/n/10 to^^San 
+ []
+
+
+Overfull \hbox (20.44434pt too wide) in paragraph at lines 13--14
+ \OT1/cmr/bx/n/10 chui 
+ []
+
+
+Overfull \hbox (6.38885pt too wide) in paragraph at lines 13--14
+ \OT1/cmr/bx/n/10 n 
+ []
+
+
+Overfull \hbox (9.58328pt too wide) in paragraph at lines 13--14
+ \OT1/cmr/bx/n/10 iu 
+ []
+
+
+Overfull \hbox (3.83331pt too wide) in paragraph at lines 13--14
+ \OT1/cmr/bx/n/10 - 
+ []
+
+
+Overfull \hbox (32.63872pt too wide) in paragraph at lines 13--14
+ \OT1/cmr/bx/n/10 Mono- 
+ []
+
+
+Overfull \hbox (21.88184pt too wide) in paragraph at lines 13--14
+ \OT1/cmr/bx/n/10 tone 
+ []
+
+
+Overfull \hbox (29.54843pt too wide) in paragraph at lines 13--14
+ \OT1/cmr/bx/n/10 chain. 
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 25.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 25.
+
+! Package inputenc Error: Unicode character ự (U+1EF1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25         }
+              
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ệ (U+1EC7)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25         }
+              
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ễ (U+1EC5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25         }
+              
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ọ (U+1ECD)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25         }
+              
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ự (U+1EF1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25         }
+              
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ư (U+01B0)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25         }
+              
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ớ (U+1EDB)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25         }
+              
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ẫ (U+1EAB)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25         }
+              
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ễ (U+1EC5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25         }
+              
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ữ (U+1EEF)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25         }
+              
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Command \DJ unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25         }
+              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode character ể (U+1EC3)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25         }
+              
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+Overfull \hbox (227.62204pt too wide) in paragraph at lines 25--26
+ []$
+ []
+
+! Undefined control sequence.
+<argument> \bf 
+               HÀ NỘI - 2019
+l.28     \centerline{\bf HÀ NỘI - 2019}
+                                          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no H in font nullfont!
+LaTeX Font Info:    Trying to load font information for +cmr on input line 28.
+LaTeX Font Info:    No file cmr.fd. on input line 28.
+
+LaTeX Font Warning: Font shape `/cmr/m/n' undefined
+(Font)              using `/cmr/m/n' instead on input line 28.
+
+! Corrupted NFSS tables.
+wrong@fontshape ...message {Corrupted NFSS tables}
+                                                  error@fontshape else let f...
+l.28     \centerline{\bf HÀ NỘI - 2019}
+                                          
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+
+LaTeX Font Warning: Font shape `/cmr/m/n' undefined
+(Font)              using `OT1/cmr/m/n' instead on input line 28.
+
+Missing character: There is no N in font nullfont!
+
+! Package inputenc Error: Unicode character Ộ (U+1ED8)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28     \centerline{\bf HÀ NỘI - 2019}
+                                          
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+Missing character: There is no I in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+
+! LaTeX Error: \begin{document} ended by \end{titlepage}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 \end{titlepage}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+<argument> {\it 
+                Sử dựng Maple biểu diễn và thể hiện thuật to�...
+l.30 ... Bao lồi 2D - Monotone chain - Maple17}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> {\it 
+                Bao lồi 2D - Monotone chain - Maple17}
+l.30 ... Bao lồi 2D - Monotone chain - Maple17}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+)
+! Emergency stop.
+<*> Cover.tex
+             
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 68 strings out of 481239
+ 739 string characters out of 5920378
+ 238564 words of memory out of 5000000
+ 15434 multiletter control sequences out of 15000+600000
+ 532646 words of font info for 25 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 22i,9n,19p,236b,227s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!
