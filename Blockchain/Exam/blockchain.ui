@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>924</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Credit-Blockchain</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="tabClient">
+       <attribute name="title">
+        <string>Client</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QTabWidget" name="tabCreateClient">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tabCreate">
+           <attribute name="title">
+            <string>Create client</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QPushButton" name="pushButtonCreateClient">
+              <property name="maximumSize">
+               <size>
+                <width>145</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Creating client</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>Private key: </string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEditPrivateKey"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>Public key:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEditPublicKey"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_25">
+              <property name="text">
+               <string>Identity:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEditIdentity">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>120</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_27">
+              <property name="text">
+               <string>Code:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEditCode">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBoxIsOrganization">
+              <property name="text">
+               <string>Organization</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tabList">
+           <attribute name="title">
+            <string>List of clients</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <item>
+             <widget class="QListView" name="listViewClient"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonUpdateListClient">
+              <property name="maximumSize">
+               <size>
+                <width>100</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Update</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabTransaction">
+       <attribute name="title">
+        <string>Transaction</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QTabWidget" name="tabWidget_2">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tabCreate">
+           <attribute name="title">
+            <string>Create transaction</string>
+           </attribute>
+           <layout class="QFormLayout" name="formLayout">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>Organization: </string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="comboBoxSender">
+              <property name="maximumSize">
+               <size>
+                <width>145</width>
+                <height>16777215</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>Identity Organization:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QPlainTextEdit" name="plainTextEditOrganizationID">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="label_5">
+              <property name="maximumSize">
+               <size>
+                <width>145</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Recipient: </string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QComboBox" name="comboBoxRecipient">
+              <property name="maximumSize">
+               <size>
+                <width>145</width>
+                <height>16777215</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="label_6">
+              <property name="text">
+               <string>Identity recipient: </string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QPlainTextEdit" name="plainTextEditRecipientID">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="0">
+             <widget class="QLabel" name="label_7">
+              <property name="text">
+               <string>Period: </string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="1">
+             <widget class="QPlainTextEdit" name="plainTextEditPeriod">
+              <property name="maximumSize">
+               <size>
+                <width>200</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="0">
+             <widget class="QPushButton" name="pushButtonCreateTran">
+              <property name="text">
+               <string>Creat transaction</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="0" colspan="2">
+             <widget class="QPlainTextEdit" name="plainTextEditMess"/>
+            </item>
+            <item row="6" column="0">
+             <widget class="QLabel" name="label_26">
+              <property name="text">
+               <string>Date:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="1">
+             <widget class="QPlainTextEdit" name="plainTextEditDate">
+              <property name="maximumSize">
+               <size>
+                <width>200</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_28">
+              <property name="text">
+               <string>Code Organization: </string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QPlainTextEdit" name="plainTextEditCodeOrganization">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <widget class="QLabel" name="label_29">
+              <property name="text">
+               <string>Code recipient:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QPlainTextEdit" name="plainTextEditCodeRecipient">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tabPool">
+           <attribute name="title">
+            <string>Pool</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <item>
+             <widget class="QListView" name="listViewUntransaction"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonUpdateListTransaction">
+              <property name="maximumSize">
+               <size>
+                <width>100</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Update</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabBlock">
+       <attribute name="title">
+        <string>Block</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QTabWidget" name="tabWidget_3">
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <widget class="QWidget" name="tabCreateBlock">
+           <attribute name="title">
+            <string>Create block</string>
+           </attribute>
+           <layout class="QFormLayout" name="formLayout_2">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_8">
+              <property name="text">
+               <string>No. transaction: </string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QPlainTextEdit" name="plainTextEditNoTran">
+              <property name="maximumSize">
+               <size>
+                <width>150</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_9">
+              <property name="text">
+               <string>List of untransaction: </string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="label_10">
+              <property name="text">
+               <string>Previous block hash: </string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QPlainTextEdit" name="plainTextEditPreviuosBlock">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <widget class="QLabel" name="label_11">
+              <property name="text">
+               <string>Difficulty: </string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QPlainTextEdit" name="plainTextEditDifficulty">
+              <property name="maximumSize">
+               <size>
+                <width>140</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QPushButton" name="pushButtonUpdateUntran">
+              <property name="maximumSize">
+               <size>
+                <width>200</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Update list transaction</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="0">
+             <widget class="QLabel" name="label_12">
+              <property name="text">
+               <string>Nonce: </string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="1">
+             <widget class="QPlainTextEdit" name="plainTextEditNonce">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_13">
+              <property name="text">
+               <string>Merkle root: </string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QPlainTextEdit" name="plainTextEditMerkleRoot">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>60</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="0">
+             <widget class="QLabel" name="label_14">
+              <property name="text">
+               <string>Timestamp: </string>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="1">
+             <widget class="QPlainTextEdit" name="plainTextEditTime">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="0">
+             <widget class="QPushButton" name="pushButtonPow">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>156</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>PoW and Create block</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="0">
+             <widget class="QLabel" name="label_15">
+              <property name="text">
+               <string>Block hash: </string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="1">
+             <widget class="QPlainTextEdit" name="plainTextEditBlockHash">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>90</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QListView" name="listViewUntransaction_BC"/>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tabBlockchain">
+           <attribute name="title">
+            <string>Blockchain</string>
+           </attribute>
+           <layout class="QFormLayout" name="formLayout_3">
+            <item row="1" column="0">
+             <widget class="QPushButton" name="pushButtonUpdateBlockchain">
+              <property name="maximumSize">
+               <size>
+                <width>120</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+              <property name="text">
+               <string>Update</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="label_16">
+              <property name="text">
+               <string>Index: </string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QPlainTextEdit" name="plainTextEditIndex">
+              <property name="maximumSize">
+               <size>
+                <width>145</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="0">
+             <widget class="QLabel" name="label_17">
+              <property name="text">
+               <string>No. transaction: </string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="1">
+             <widget class="QPlainTextEdit" name="plainTextEditNoTran_BC">
+              <property name="maximumSize">
+               <size>
+                <width>145</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="0">
+             <widget class="QLabel" name="label_18">
+              <property name="text">
+               <string>List transaction:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="1">
+             <widget class="QListView" name="listViewTransaction"/>
+            </item>
+            <item row="9" column="0">
+             <widget class="QLabel" name="label_19">
+              <property name="text">
+               <string>Merkle root: </string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="1">
+             <widget class="QPlainTextEdit" name="plainTextEditMerkleRoot_BC">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>60</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="10" column="0">
+             <widget class="QLabel" name="label_20">
+              <property name="text">
+               <string>Difficulty: </string>
+              </property>
+             </widget>
+            </item>
+            <item row="10" column="1">
+             <widget class="QPlainTextEdit" name="plainTextEditDifficulty_BC">
+              <property name="maximumSize">
+               <size>
+                <width>145</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="11" column="0">
+             <widget class="QLabel" name="label_21">
+              <property name="text">
+               <string>Nonce: </string>
+              </property>
+             </widget>
+            </item>
+            <item row="11" column="1">
+             <widget class="QPlainTextEdit" name="plainTextEditNonce_BC">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="12" column="0">
+             <widget class="QLabel" name="label_22">
+              <property name="text">
+               <string>Timestamp:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="12" column="1">
+             <widget class="QPlainTextEdit" name="plainTextEditTime_BC">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="14" column="0">
+             <widget class="QLabel" name="label_23">
+              <property name="text">
+               <string>Previous block: </string>
+              </property>
+             </widget>
+            </item>
+            <item row="14" column="1">
+             <widget class="QPlainTextEdit" name="plainTextEditPreviuosBlock_BC">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>145</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="16" column="0">
+             <widget class="QLabel" name="label_24">
+              <property name="text">
+               <string>Block hash:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="16" column="1">
+             <widget class="QPlainTextEdit" name="plainTextEditBlockHash_BC">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>145</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="17" column="1">
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QPushButton" name="pushButtonPreviousBlock">
+                <property name="maximumSize">
+                 <size>
+                  <width>200</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Previous block</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButtonNextBlock">
+                <property name="maximumSize">
+                 <size>
+                  <width>200</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Next block</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab">
+           <attribute name="title">
+            <string>Verify Blockchain</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <item>
+             <widget class="QPushButton" name="pushButtonVerify">
+              <property name="maximumSize">
+               <size>
+                <width>200</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Verify</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEditVerify"/>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
